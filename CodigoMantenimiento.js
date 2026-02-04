@@ -16,7 +16,7 @@ for (let i = 1; i <= 10; i++) {
         rows="1"
         style="resize:none;"
         aria-label="Ubicación"
-        > </textarea>
+        ></textarea>
       </td>
 
     
@@ -27,7 +27,7 @@ for (let i = 1; i <= 10; i++) {
         rows="1"
         style="resize:none;"
         aria-label="Nombre del Bien"
-        > </textarea>
+        ></textarea>
     </td>
     
     
@@ -38,7 +38,7 @@ for (let i = 1; i <= 10; i++) {
         rows="1"
         style="resize:none;"
         aria-label="Marca"
-        > </textarea>
+        ></textarea>
       </td>
 
     
@@ -84,7 +84,7 @@ for (let i = 1; i <= 10; i++) {
         rows="1"
         style="resize:none;"
         aria-label="fechaUltimo"
-        > </textarea>
+        ></textarea>
       </td>
 
 
@@ -684,7 +684,7 @@ function agregarFila(){
         rows="1"
         style="resize:none;"
         aria-label="Ubicación"
-        > </textarea>
+        ></textarea>
       </td>
 
     
@@ -695,7 +695,7 @@ function agregarFila(){
         rows="1"
         style="resize:none;"
         aria-label="Nombre del Bien"
-        > </textarea>
+        ></textarea>
     </td>
     
     
@@ -706,7 +706,7 @@ function agregarFila(){
         rows="1"
         style="resize:none;"
         aria-label="Marca"
-        > </textarea>
+        ></textarea>
       </td>
 
     
@@ -752,7 +752,7 @@ function agregarFila(){
         rows="1"
         style="resize:none;"
         aria-label="fechaUltimo"
-        > </textarea>
+        ></textarea>
       </td>
 
 
@@ -968,7 +968,7 @@ setTimeout(() => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbw0MESGpTtt-lCaAX4KbtNyQOw3VjzIvzv8bVwWpxDefNokuv-AB-OppZnkBOR0vwftHg/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbx5yAsYeDIJI81wLah-tYD70miwKhWe79cb7MmBXaupBITTZ1nkuEx75NR6deYUdaYhzA/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -987,6 +987,12 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
+
+
+
+
+
 
 
 
