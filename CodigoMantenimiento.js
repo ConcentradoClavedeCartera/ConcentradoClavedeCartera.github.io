@@ -230,7 +230,10 @@ SG:[{text:"Unidad Politécnica de gestión con perspectiva de género (UPGPG)",v
           {text:"Dirección de cómputo y comunicaciones", value:"DCC"}, 
           {text:"Dirección de sistemas informáticos", value:"DSI"}],  
    /*YA */   
-    ER:[{text:"Estación de Radiodifusión XHIPN-FM 95.7 MHz", value:"ER"}]    
+    ER:[{text:"Estación de Radiodifusión XHIPN-FM 95.7 MHz", value:"ER"}], 
+
+    POI:[{text:"Patronato de Obras e Instalaciones  (POI)", value:"POI"}],
+    COFAA:[{text:"Comisión de Operación y Fomento de Actividades Académicas (COFAA)", value:"COFAA"}],
 }
 
 
@@ -987,6 +990,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
