@@ -271,7 +271,9 @@ SG:[{text:"Unidad Politécnica de gestión con perspectiva de género (UPGPG)",v
           {text:"Dirección de cómputo y comunicaciones", value:"DCC"}, 
           {text:"Dirección de sistemas informáticos", value:"DSI"}],  
    /*YA */   
-    ER:[{text:"Estación de Radiodifusión XHIPN-FM 95.7 MHz", value:"ER"}]    
+    ER:[{text:"Estación de Radiodifusión XHIPN-FM 95.7 MHz", value:"ER"}],
+  POI:[{text:"Patronato de Obras e Instalaciones  (POI)", value:"POI"}],
+    COFAA:[{text:"Comisión de Operación y Fomento de Actividades Académicas (COFAA)", value:"COFAA"}]
 }
 
 
@@ -423,7 +425,12 @@ const direcciones={
     
     //Estacion de Radio
     
-    ER:[{text:"Administrativo",value:"ADMIN_ER"}]
+    ER:[{text:"Administrativo",value:"ADMIN_ER"}],
+    // POI
+    POI:[{text:"Administrativo",value:"ADMIN_POI"}],
+
+    // 
+    COFAA:[{text:"Administrativo",value:"ADMIN_COFAA"}]
 }    
 
 direccionInput.addEventListener("change", () => {
@@ -663,7 +670,9 @@ ADMIN_DSI_CENAC:["Dirección de sistemas informáticos"],
   
 //Estacion de Radio
 
-ADMIN_ER:["Estación de Radiodifusión Radio IPN XHIPN-FM 95.7 MHZ."]
+ADMIN_ER:["Estación de Radiodifusión Radio IPN XHIPN-FM 95.7 MHZ."],
+ ADMIN_POI:["Patronato de Obras e Instalaciones  (POI)"],
+ADMIN_COFAA:["Comisión de Operación y Fomento de Actividades Académicas (COFAA)"] 
 };
 
 nivelInput.addEventListener("change", () => {
@@ -1066,6 +1075,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
