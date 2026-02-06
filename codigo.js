@@ -930,7 +930,7 @@ document.getElementById("cargarBorrador").addEventListener("click", () => {
   }
 
 try {
-    const res = await fetch("TU_ENDPOINT_DE_APPS_SCRIPT", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbzG3sy6x4Mx_2M1yg0iv_7d7feF3ASK1thHRwObrqgnx377JaBvAJtZeuhROW3-fYrYRA/exec", {
       method: "POST",
       body: JSON.stringify({action: "cargarBorrador", folio})
     });
@@ -1064,6 +1064,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
