@@ -1007,6 +1007,10 @@ setTimeout(() => {
   }, 0);
 }, 0);
   alert("📂 Borrador cargado correctamente");
+} catch (e) {
+    alert("⚠️ Error de conexión al cargar el borrador");
+}
+  
 });
 
 
@@ -1064,6 +1068,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
