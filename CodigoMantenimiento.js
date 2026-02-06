@@ -845,7 +845,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
 
 
 try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbxErq8k2UIELs9KdHlFaWulWBefknU5Oyjdm0vHl237xMb8oHBtwvkyChcHuJTled5lFg/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbws2j-EPmiPNk8jCA2nrNOWvEOx9CRq6rnrpa8s34sBOCt7fnZqZbcT9EaLSWv6qBuCFg/exec", {
       method: "POST",
       body: JSON.stringify({action: "guardarBorrador", data})
     });
@@ -868,7 +868,6 @@ if (json.success) {
   }
 
 });
-
 
 
 
@@ -927,7 +926,7 @@ document.getElementById("cargarBorrador").addEventListener("click", async () => 
   }
 
 try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbxErq8k2UIELs9KdHlFaWulWBefknU5Oyjdm0vHl237xMb8oHBtwvkyChcHuJTled5lFg/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbws2j-EPmiPNk8jCA2nrNOWvEOx9CRq6rnrpa8s34sBOCt7fnZqZbcT9EaLSWv6qBuCFg/exec", {
       method: "POST",
       body: JSON.stringify({action: "cargarBorrador", folio})
     });
@@ -1035,7 +1034,7 @@ setTimeout(() => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbxErq8k2UIELs9KdHlFaWulWBefknU5Oyjdm0vHl237xMb8oHBtwvkyChcHuJTled5lFg/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbws2j-EPmiPNk8jCA2nrNOWvEOx9CRq6rnrpa8s34sBOCt7fnZqZbcT9EaLSWv6qBuCFg/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -1054,6 +1053,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
