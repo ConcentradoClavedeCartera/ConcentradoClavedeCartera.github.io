@@ -900,10 +900,17 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   });
 
 
-/* REVISAR*/
 
 
-  document.getElementById("guardarBorrador").addEventListener("click", () => {
+
+
+//---------------------------Generar Folio
+function generarFolio() {
+  return 'FOLIO-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+}
+
+//----------------------------------------------Guardado de Borrador------------------------------------------------
+ document.getElementById("guardarBorrador").addEventListener("click", async () => {
   const form = document.getElementById("miFormulario");
   const formData = new FormData(form);
 
@@ -915,10 +922,34 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
 
   // Guardamos también el número de filas actuales
   data.__filas = document.querySelectorAll("#tablaBody tr").length;
+ 
+  const folio = generarFolio();
+  data.__folio = folio;
 
-  localStorage.setItem("borradorFormulario", JSON.stringify(data));
 
-  alert("✅ Borrador guardado correctamente");
+try {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbzBiNtaCPUx-nQHMMuX-cDf3O1L6HMSfNdwpr8kzRMG-cCFIpt1Ae37U32ufy0h-EUCyw/exec", {
+      method: "POST",
+      body: JSON.stringify({action: "guardarBorrador", data})
+    });
+    
+  //              localStorage.setItem("borradorFormulario", JSON.stringify(data));
+
+//  alert("✅ Borrador guardado correctamente");
+
+  
+// ---------------Nuevo------------------------------------------- 
+
+  const json = await res.json();
+if (json.success) {
+      alert(`✅ Borrador guardado correctamente. Tu folio es: ${folio}`);
+    } else {
+      alert("⚠️ Error al guardar el borrador: " + json.message);
+    }
+  } catch (e) {
+    alert("⚠️ Error de conexión al guardar el borrador");
+  }
+
 });
 
 
@@ -961,26 +992,45 @@ function restaurarTabla(data) {
 
 
 
-document.getElementById("cargarBorrador").addEventListener("click", () => {
-  const borrador = localStorage.getItem("borradorFormulario");
-  if (!borrador) {
-    alert("⚠️ No hay ningún borrador guardado");
+//-------------------------- Borrador con  folio (Backend)   
+
+document.getElementById("cargarBorrador").addEventListener("click", async () => {
+  
+  const folio = document.getElementById("folioInput").value.trim();
+  if (!folio) {
+    alert("⚠️ Ingresa un folio válido");
     return;
   }
 
-  const data = JSON.parse(borrador);
+try {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbzBiNtaCPUx-nQHMMuX-cDf3O1L6HMSfNdwpr8kzRMG-cCFIpt1Ae37U32ufy0h-EUCyw/exec", {
+      method: "POST",
+      body: JSON.stringify({action: "cargarBorrador", folio})
+    });
+    const json = await res.json();
+
+    if (!json.success) {
+      alert("⚠️ " + json.message);
+      return;
+    }
+
+//----------------------------------------------------------------------------
+
+  const data =json.data;
+
+  
   const form = document.getElementById("miFormulario");
 
   // Limpiar tabla
   const tbody = document.getElementById("tablaBody");
   tbody.innerHTML = "";
 
-  // Reconstruir filas
+  /* Reconstruir filas
   const filas = data.__filas || 10;
   for (let i = 1; i <= filas; i++) {
     agregarFila();
   }
-
+*/
 
 
 // Restaurar selects encadenados
@@ -1018,6 +1068,10 @@ setTimeout(() => {
   }, 0);
 }, 0);
   alert("📂 Borrador cargado correctamente");
+} catch (e) {
+    alert("⚠️ Error de conexión al cargar el borrador");
+}
+  
 });
 
 
@@ -1056,7 +1110,7 @@ setTimeout(() => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbxgpB34BxBdX5LFaKMicuV2mvcK5sKNt5mDlTZ8ayJTcbjzyZ3uImlUhha62T5gcMmywA/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbzBiNtaCPUx-nQHMMuX-cDf3O1L6HMSfNdwpr8kzRMG-cCFIpt1Ae37U32ufy0h-EUCyw/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -1075,6 +1129,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
