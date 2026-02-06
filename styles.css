@@ -382,9 +382,13 @@ legend{
     text-align: justify;
     font-size:large;
 }
-.C5000{
-  width:100%;
-  min-width: 600px;
+.A5000{
+    margin-top:20px ;
+    width:300px;
+}
+.AB5000{
+    margin-top:5px ;
+    width:300px;
 }
 .OBJ{
    width:100%;
@@ -496,6 +500,12 @@ a {
   margin: 20px auto;
   margin-left: 5px;
 }
+
+
+.capitulos {
+  width: 900px;
+  
+} 
 
 
 
