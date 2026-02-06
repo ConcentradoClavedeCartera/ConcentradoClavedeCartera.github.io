@@ -509,4 +509,14 @@ legend{
   line-height: 1.2;
   font-size: 1.1rem;
   white-space: normal;
+
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
