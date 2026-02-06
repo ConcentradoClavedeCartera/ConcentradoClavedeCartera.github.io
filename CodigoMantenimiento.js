@@ -824,7 +824,10 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
 
 /* REVISAR*/
 
-
+//---------------------------Generar Folio
+function generarFolio() {
+  return 'FOLIO-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+}
 
 //----------------------------------------------Guardado de Borrador------------------------------------------------
  document.getElementById("guardarBorrador").addEventListener("click", async () => {
@@ -1053,6 +1056,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
