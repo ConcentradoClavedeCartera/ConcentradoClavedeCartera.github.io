@@ -101,7 +101,7 @@ const direccionInput = document.getElementById("direccion");
 const nivelInput = document.getElementById("nivel");
 const dependenciaInput = document.getElementById("dependencia");
 
-/*-----------------------------------Agregar fila cuando se agrega un equipo---------------------------------------
+//-----------------------------------Agregar fila cuando se agrega un equipo---------------------------------------
 document.getElementById("tablaBody").addEventListener("change", e => {
   if (!e.target.name?.startsWith("nombredelEquipoR")) return;
 
@@ -1064,6 +1064,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
