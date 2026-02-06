@@ -489,6 +489,15 @@ a {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+.bloque-3000,.bloque-5000,.bloque-6000 {
+  display: flex;
+  gap: 40px;
+/*  max-width: 1200px;*/
+  margin: 20px auto;
+  margin-left: 5px;
+}
+
+
 
 
 
