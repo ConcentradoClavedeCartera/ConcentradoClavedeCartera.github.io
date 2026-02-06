@@ -833,7 +833,7 @@ function generarFolio() {
 //---------------------------GuardarBorrador--------------------------------------------------
 
 
-  document.getElementById("guardarBorrador").addEventListener("click", () => {
+  document.getElementById("guardarBorrador").addEventListener("click", async () => {
   const form = document.getElementById("miFormulario");
   const formData = new FormData(form);
 
@@ -920,7 +920,7 @@ function restaurarTabla(data) {
 
 
 
-document.getElementById("cargarBorrador").addEventListener("click", () => {
+document.getElementById("cargarBorrador").addEventListener("click", async () => {
 //-------------------------- Borrador con  folio (Backend)   
   
   const folio = document.getElementById("folioInput").value.trim();
@@ -1064,6 +1064,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
