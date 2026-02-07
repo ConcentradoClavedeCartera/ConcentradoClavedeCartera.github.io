@@ -8,7 +8,7 @@ for (let i = 1; i <= 10; i++) {
     
     
     <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
-
+    
 
 
     <td>
@@ -61,6 +61,20 @@ for (let i = 1; i <= 10; i++) {
         aria-label="Nombre del Bien"
         ></textarea>
     </td>
+
+
+    <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="text"
+                   name="costoDeCotizacionR${i}"
+                   class="input_tabla precio"
+                   oninput="formatearMiles(this)"
+                   inputmode="decimal" 
+                   aria-label="CostodeCotizacion"> 
+            </input>
+      </div>
+
+
     
     
     <td>
@@ -1050,6 +1064,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
