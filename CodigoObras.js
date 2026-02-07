@@ -34,6 +34,17 @@ for (let i = 1; i <= 10; i++) {
            aria-label="Antigüedad">
   </td>
 
+<td>
+    <textarea
+      name="justificacionR${i}"
+      class="auto-expand input_tabla"
+      rows="1"
+      style="resize:none;"
+      aria-label="justificacion"></textarea>
+  </td>
+
+
+
   <td>
     <input type="number"
            name="levTopograficoR${i}"
@@ -97,31 +108,72 @@ for (let i = 1; i <= 10; i++) {
   <td>
 
 
-    <textarea
-      name="estatusLegalR${i}"
-      class="auto-expand input_tabla "
-      rows="1"
-      style="resize:none;"
-      aria-label="Estatus legal del Inmueble"></textarea> 
+    
+       <select
+            name="estatusLegalR${i}"
+            class="tabla_select "
+            aria-label="Estatus legal del Inmueble">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Propio">Propio</option>
+                    <option value="Federal">Federal</option>
+                    <option value="Donado">Donado</option>
+                    <option value="Comodato">Comodato</option>
+     </select> 
+</td>
+
+  <td>
+    <select
+      name="materialDominanteR${i}""
+      class="tabla_select"
+      aria-label="Material Dominante">
+        <option value="">-- Selecciona --</option>
+        <option value="Concreto armado">Concreto armado</option> 
+        <option value="Tabique/Ladrillo">Tabique/Ladrillo</option>
+        <option value="Madera">Madera</option>           
+        <option value="Adobe">Adobe</option>            
+        <option value="Piedra">Piedra</option>
+        <option value="Lámina metálica">Lámina metálica</option>
+        <option value="Lámina de fibrocemento (asbesto)">Lámina de fibrocemento (asbesto)</option>
+        <option value="Mixto">Mixto</option>
+        <option value="Otro">Otro</option>
+        <option value="N/A">N/A</option>
+        </select>
   </td>
 
   <td>
-    <textarea
-      name="materialDominanteR${i}"
-      class="auto-expand input_tabla"
-      rows="1"
-      style="resize:none;"
-      aria-label="Material Dominante"></textarea>
-  </td>
-
-  <td>
-    <textarea
+     <select
       name="desperfectosR${i}"
-      class="auto-expand input_tabla"
-      rows="1"
-      style="resize:none;"
-      aria-label="Desperfectos del Inmueble"></textarea>
+      class="tabla_select obligatorio"
+      aria-label="Desperfectos del Inmueble">
+        <option value="">-- Selecciona --</option>
+        <option value="Desprendimiento">Desprendimiento</option>
+        <option value="Hundimiento">Hundimiento</option>
+        <option value="Filtraciones">Filtraciones</option>
+        <option value="Fisuras">Fisuras</option>
+        <option value="Fracturas">Fracturas</option>
+        <option value="Inclinación de piso">Inclinación de piso </option>
+        <option value="Inundaciones">Inundaciones</option>
+        <option value="Vibraciones">Vibraciones</option>
+        <option value="Otro">Otro</option>         
+        <option value=" N/A"> N/A</option>
+    </select>
   </td>
+ 
+ <td>
+
+      <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="text"
+                   name="costoDeCotizacionR${i}"
+                   class="input_tabla precio"
+                   oninput="formatearMiles(this)"
+                   inputmode="decimal" 
+                   aria-label="costoDeCotizacion"> 
+            </input>
+      </div>
+      </td>
+
+
 
   <td>
     <select
@@ -722,11 +774,11 @@ function agregarFila(){
   const i = obtenerNumeroFila();
 
   const fila = document.createElement("tr");
-  fila.innerHTML=`
+  fila.innerHTML= `
   <td>
     <textarea
       name="denominacionEspacioR${i}"
-      class="auto-expand input_tabla obligatorio fijasCol"
+      class="auto-expand input_tabla obligatorio"
       rows="1"
       style="resize:none;"
       aria-label="Denominación del Espacio o Área"></textarea>
@@ -752,6 +804,17 @@ function agregarFila(){
            class="input_tabla"
            aria-label="Antigüedad">
   </td>
+
+<td>
+    <textarea
+      name="justificacionR${i}"
+      class="auto-expand input_tabla"
+      rows="1"
+      style="resize:none;"
+      aria-label="justificacion"></textarea>
+  </td>
+
+
 
   <td>
     <input type="number"
@@ -816,31 +879,72 @@ function agregarFila(){
   <td>
 
 
-    <textarea
-      name="estatusLegalR${i}"
-      class="auto-expand input_tabla "
-      rows="1"
-      style="resize:none;"
-      aria-label="Estatus legal del Inmueble"></textarea> 
+    
+       <select
+            name="estatusLegalR${i}"
+            class="tabla_select "
+            aria-label="Estatus legal del Inmueble">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Propio">Propio</option>
+                    <option value="Federal">Federal</option>
+                    <option value="Donado">Donado</option>
+                    <option value="Comodato">Comodato</option>
+     </select> 
+</td>
+
+  <td>
+    <select
+      name="materialDominanteR${i}""
+      class="tabla_select"
+      aria-label="Material Dominante">
+        <option value="">-- Selecciona --</option>
+        <option value="Concreto armado">Concreto armado</option> 
+        <option value="Tabique/Ladrillo">Tabique/Ladrillo</option>
+        <option value="Madera">Madera</option>           
+        <option value="Adobe">Adobe</option>            
+        <option value="Piedra">Piedra</option>
+        <option value="Lámina metálica">Lámina metálica</option>
+        <option value="Lámina de fibrocemento (asbesto)">Lámina de fibrocemento (asbesto)</option>
+        <option value="Mixto">Mixto</option>
+        <option value="Otro">Otro</option>
+        <option value="N/A">N/A</option>
+        </select>
   </td>
 
   <td>
-    <textarea
-      name="materialDominanteR${i}"
-      class="auto-expand input_tabla"
-      rows="1"
-      style="resize:none;"
-      aria-label="Material Dominante"></textarea>
-  </td>
-
-  <td>
-    <textarea
+     <select
       name="desperfectosR${i}"
-      class="auto-expand input_tabla"
-      rows="1"
-      style="resize:none;"
-      aria-label="Desperfectos del Inmueble"></textarea>
+      class="tabla_select obligatorio"
+      aria-label="Desperfectos del Inmueble">
+        <option value="">-- Selecciona --</option>
+        <option value="Desprendimiento">Desprendimiento</option>
+        <option value="Hundimiento">Hundimiento</option>
+        <option value="Filtraciones">Filtraciones</option>
+        <option value="Fisuras">Fisuras</option>
+        <option value="Fracturas">Fracturas</option>
+        <option value="Inclinación de piso">Inclinación de piso </option>
+        <option value="Inundaciones">Inundaciones</option>
+        <option value="Vibraciones">Vibraciones</option>
+        <option value="Otro">Otro</option>         
+        <option value=" N/A"> N/A</option>
+    </select>
   </td>
+ 
+ <td>
+
+      <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="text"
+                   name="costoDeCotizacionR${i}"
+                   class="input_tabla precio"
+                   oninput="formatearMiles(this)"
+                   inputmode="decimal" 
+                   aria-label="costoDeCotizacion"> 
+            </input>
+      </div>
+      </td>
+
+
 
   <td>
     <select
@@ -1129,6 +1233,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
