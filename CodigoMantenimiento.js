@@ -77,7 +77,7 @@ for (let i = 1; i <= 10; i++) {
       </select>
     </td>
 
-
+    <td>
     <div class="precio-wrapper">
             <span class="peso">$</span>
             <input type="text"
@@ -88,7 +88,7 @@ for (let i = 1; i <= 10; i++) {
                    aria-label="CostodeCotizacion"> 
             </input>
       </div>
-
+    </td>
 
 
     
@@ -1070,6 +1070,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
