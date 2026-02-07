@@ -63,16 +63,7 @@ for (let i = 1; i <= 10; i++) {
     </td>
 
 
-    <div class="precio-wrapper">
-            <span class="peso">$</span>
-            <input type="text"
-                   name="costoDeCotizacionR${i}"
-                   class="input_tabla precio"
-                   oninput="formatearMiles(this)"
-                   inputmode="decimal" 
-                   aria-label="CostodeCotizacion"> 
-            </input>
-      </div>
+    
 
 
     
@@ -85,6 +76,21 @@ for (let i = 1; i <= 10; i++) {
                    <option value="Malo">Malo</option>
       </select>
     </td>
+
+
+    <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="text"
+                   name="costoDeCotizacionR${i}"
+                   class="input_tabla precio"
+                   oninput="formatearMiles(this)"
+                   inputmode="decimal" 
+                   aria-label="CostodeCotizacion"> 
+            </input>
+      </div>
+
+
+
     
     
          
@@ -1064,6 +1070,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
