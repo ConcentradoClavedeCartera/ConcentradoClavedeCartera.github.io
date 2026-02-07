@@ -699,12 +699,12 @@ function agregarFila(){
   const i = obtenerNumeroFila();
 
   const fila = document.createElement("tr");
-  fila.innerHTML = `
+  fila.innerHTML =  `
   <td id="nivelR${i}" class="input_tabla fijasCol" aria-label="Nivel/Area/Otro"></td>
     
     
     <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
-
+    
 
 
     <td>
@@ -757,6 +757,11 @@ function agregarFila(){
         aria-label="Nombre del Bien"
         ></textarea>
     </td>
+
+
+    
+
+
     
     
     <td>
@@ -767,6 +772,21 @@ function agregarFila(){
                    <option value="Malo">Malo</option>
       </select>
     </td>
+
+    <td>
+    <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="text"
+                   name="costoDeCotizacionR${i}"
+                   class="input_tabla precio"
+                   oninput="formatearMiles(this)"
+                   inputmode="decimal" 
+                   aria-label="CostodeCotizacion"> 
+            </input>
+      </div>
+    </td>
+
+
     
     
          
@@ -1070,6 +1090,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
