@@ -8,7 +8,19 @@ for (let i = 1; i <= 10; i++) {
     
     
     <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
-    
+
+
+
+    <td>
+      <textarea
+        name="EdificioR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+        aria-label="Edificio"
+        ></textarea>
+      </td> 
+      
     <td>
       <textarea
         name="UbicaciónR${i}"
@@ -18,7 +30,7 @@ for (let i = 1; i <= 10; i++) {
         aria-label="Ubicación"
         ></textarea>
       </td>
-
+      
     
     <td>
       <textarea
@@ -31,20 +43,7 @@ for (let i = 1; i <= 10; i++) {
     </td>
     
     
-    <td>
-      <textarea
-        name="marcaR${i}"
-        class="auto-expand input_tabla"
-        rows="1"
-        style="resize:none;"
-        aria-label="Marca"
-        ></textarea>
-      </td>
-
     
-
-    
-
     <td>
       <select id="tipodeServicioR${i}" name="tipodeServicioR${i}" class="tabla_select" aria-label="tipodeServicio">
                    <option value="">-- Selecciona una prioridad--</option>
@@ -53,6 +52,17 @@ for (let i = 1; i <= 10; i++) {
       </select>
     </td>
 
+    <td>
+      <textarea
+        name="justificacionR${i}"
+        class="auto-expand input_tabla "
+        rows="1"
+        style="resize:none;"
+        aria-label="Nombre del Bien"
+        ></textarea>
+    </td>
+    
+    
     <td>
       <select id="estadoActualR${i}" name="estadoActualR${i}" class="tabla_select" aria-label="estadoActual">
                    <option value="">-- Selecciona una prioridad--</option>
@@ -63,20 +73,7 @@ for (let i = 1; i <= 10; i++) {
     </td>
     
     
-     <td>
-
-      <div class="precio-wrapper">
-            <span class="peso">$</span>
-            <input type="text"
-                   name="costoDeCotizacionR${i}"
-                   class="input_tabla precio"
-                   oninput="formatearMiles(this)"
-                   inputmode="decimal" 
-                   aria-label="costoDeCotizacion"> 
-            </input>
-      </div>
-      </td>
-    
+         
     <td>
       <textarea
         name="fechaUltimoR${i}"
@@ -93,7 +90,7 @@ for (let i = 1; i <= 10; i++) {
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
-                   <option value="Alta">Alta</option>
+                   <option value="Alta">Urgente</option>
       </select>
     </td>
 
@@ -682,11 +679,24 @@ function agregarFila(){
   const i = obtenerNumeroFila();
 
   const fila = document.createElement("tr");
-  fila.innerHTML = `  <td id="nivelR${i}" class="input_tabla fijasCol" aria-label="Nivel/Area/Otro"></td>
+  fila.innerHTML = `
+  <td id="nivelR${i}" class="input_tabla fijasCol" aria-label="Nivel/Area/Otro"></td>
     
     
     <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
-    
+
+
+
+    <td>
+      <textarea
+        name="EdificioR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+        aria-label="Edificio"
+        ></textarea>
+      </td> 
+      
     <td>
       <textarea
         name="UbicaciónR${i}"
@@ -696,7 +706,7 @@ function agregarFila(){
         aria-label="Ubicación"
         ></textarea>
       </td>
-
+      
     
     <td>
       <textarea
@@ -709,20 +719,7 @@ function agregarFila(){
     </td>
     
     
-    <td>
-      <textarea
-        name="marcaR${i}"
-        class="auto-expand input_tabla"
-        rows="1"
-        style="resize:none;"
-        aria-label="Marca"
-        ></textarea>
-      </td>
-
     
-
-    
-
     <td>
       <select id="tipodeServicioR${i}" name="tipodeServicioR${i}" class="tabla_select" aria-label="tipodeServicio">
                    <option value="">-- Selecciona una prioridad--</option>
@@ -731,6 +728,17 @@ function agregarFila(){
       </select>
     </td>
 
+    <td>
+      <textarea
+        name="justificacionR${i}"
+        class="auto-expand input_tabla "
+        rows="1"
+        style="resize:none;"
+        aria-label="Nombre del Bien"
+        ></textarea>
+    </td>
+    
+    
     <td>
       <select id="estadoActualR${i}" name="estadoActualR${i}" class="tabla_select" aria-label="estadoActual">
                    <option value="">-- Selecciona una prioridad--</option>
@@ -741,20 +749,7 @@ function agregarFila(){
     </td>
     
     
-     <td>
-
-      <div class="precio-wrapper">
-            <span class="peso">$</span>
-            <input type="text"
-                   name="costoDeCotizacionR${i}"
-                   class="input_tabla precio"
-                   oninput="formatearMiles(this)"
-                   inputmode="decimal" 
-                   aria-label="costoDeCotizacion"> 
-            </input>
-      </div>
-      </td>
-    
+         
     <td>
       <textarea
         name="fechaUltimoR${i}"
@@ -771,12 +766,11 @@ function agregarFila(){
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
-                   <option value="Alta">Alta</option>
+                   <option value="Alta">Urgente</option>
       </select>
     </td>
 
-    `;
-
+  `;
   tbody.appendChild(fila);
 
   generarNivel();
@@ -1056,6 +1050,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
