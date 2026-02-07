@@ -265,12 +265,12 @@ p {
 .tabla_style th:nth-child(1),
 .tabla_style td:nth-child(1){
     width: 8%;
-    min-width: 96px;
+    min-width: 106px;
 }
 .tabla_style th:nth-child(2),
 .tabla_style td:nth-child(2){
     width: 8%;
-    min-width: 110px;
+    min-width: 120px;
 }
 .tabla_style th:nth-child(3),
 .tabla_style td:nth-child(3){
@@ -285,7 +285,7 @@ p {
 .tabla_style th:nth-child(5),
 .tabla_style td:nth-child(5){
     width: 9%;
-    min-width: 108px;
+    min-width: 128px;
 }
 
 .tabla_style th:nth-child(6),
@@ -306,22 +306,22 @@ p {
 .tabla_style th:nth-child(9),
 .tabla_style td:nth-child(9){
     width: 8%;
-    min-width: 96px;
+    min-width: 116px;
 }
 .tabla_style th:nth-child(10),
 .tabla_style td:nth-child(10){
     width: 8%;
-    min-width: 106px;
+    min-width: 116px;
 }
 .tabla_style th:nth-child(11),
 .tabla_style td:nth-child(11){
     width: 8%;
-    min-width: 106px;
+    min-width: 116px;
 }
 .tabla_style th:nth-child(12),
 .tabla_style td:nth-child(12){
     width: 8%;
-    min-width: 106px;
+    min-width: 116px;
 }
 .tabla_style th:nth-child(13),
 .tabla_style td:nth-child(13){
@@ -335,6 +335,16 @@ p {
 }
 .tabla_style th:nth-child(15),
 .tabla_style td:nth-child(15){
+    width: 8%;
+    min-width: 106px;
+}
+.tabla_style th:nth-child(16),
+.tabla_style td:nth-child(16){
+    width: 8%;
+    min-width: 106px;
+}
+.tabla_style th:nth-child(17),
+.tabla_style td:nth-child(17){
     width: 8%;
     min-width: 106px;
 }
@@ -520,3 +530,4 @@ a {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
