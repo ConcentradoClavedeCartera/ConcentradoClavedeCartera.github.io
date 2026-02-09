@@ -393,10 +393,11 @@ legend{
     width:300px;
 }
 .OBJ{
-   width:100%;
-   min-width: 300px;
+    max-width:900px;
 }
-.DatosNOT{
+.OBJETIVO{
+    text-align: left;
+}.DatosNOT{
     align-self: center;
     margin:5%;
 }
@@ -502,6 +503,7 @@ a {
   width: 900px;
   
 } 
+
 
 
 
