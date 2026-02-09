@@ -514,4 +514,31 @@ a {
     margin-bottom: 10px;
 }
 
+a {
+    display: inline-block;
+    /*margin-bottom: 10px;
+    */padding: 10px 20px;
+    background-color:transparent;
+    /*color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;*/
+
+}
+.bloque-3000,.bloque-5000,.bloque-6000 {
+  display: flex;
+  gap: 40px;
+/*  max-width: 1200px;*/
+  margin: 20px auto;
+  margin-left: 5px;
+}
+
+
+.capitulos {
+  width: 900px;
+  
+}
+
+
+
 
