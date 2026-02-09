@@ -19,12 +19,19 @@ body{
 }
 
 /* ENCABEZADOS */
-h1,h2 {
+h1 {
     text-align: center;
     margin: 10px 0;
     text-transform: uppercase;
     color: #000;
 }
+h2 {
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #000;
+}
+
 
 h3, p, li {
     margin: 10px 0;
@@ -495,6 +502,7 @@ a {
   width: 900px;
   
 } 
+
 
 
 
