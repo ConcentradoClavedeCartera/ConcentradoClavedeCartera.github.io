@@ -24,14 +24,14 @@ body{
 }
 
 /* ENCABEZADOS */
-h1 {
+h1,h2 {
     text-align: center;
     margin: 10px 0;
     text-transform: uppercase;
     color: #000;
 }
 
-h2, p, li {
+h3, p, li {
     margin: 10px 0;
     color: #000;
     width: 100%;
@@ -538,6 +538,7 @@ a {
   width: 900px;
   
 }
+
 
 
 
