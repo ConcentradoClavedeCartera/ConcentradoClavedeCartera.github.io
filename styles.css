@@ -14,11 +14,6 @@ body{
      font-family: sans-serif;
     /* background-color:#222;*/
      color:#000;
-
-     /* background:linear-gradient(to bottom,#fff,#9d2449);*/
-    /* background-color: #98989A;
-     background-color: #BABABC;
-    */
      background-color: #DCDCDE;
 
 }
@@ -486,17 +481,11 @@ legend{
 
 a {
     display: inline-block;
-   /* padding: 10px 20px;
-    background-color: #611232;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 10px;*/
+   
 }
 .bloque-3000,.bloque-5000,.bloque-6000 {
   display: flex;
   gap: 40px;
-/*  max-width: 1200px;*/
   margin: 20px auto;
   margin-left: 5px;
 }
@@ -506,6 +495,7 @@ a {
   width: 900px;
   
 } 
+
 
 
 
