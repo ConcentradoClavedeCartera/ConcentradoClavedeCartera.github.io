@@ -394,7 +394,7 @@ legend{
 }
 .OBJ{
    width:100%;
-   min-width: 500px;
+   min-width: 300px;
 }
 .DatosNOT{
     align-self: center;
@@ -502,6 +502,7 @@ a {
   width: 900px;
   
 } 
+
 
 
 
