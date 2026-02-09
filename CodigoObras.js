@@ -1032,6 +1032,7 @@ function generarFolio() {
 
 
 try {
+  
     const res = await fetch("https://script.google.com/macros/s/AKfycbzLH8rURq7lZZtUBGwOt6tktE_CtYUzxsyoxZaY6sPx9Haka_OCBdcRPzPGZe_TTSxNHg/exec", {
       method: "POST",
       body: JSON.stringify({action: "guardarBorrador", data})
@@ -1209,11 +1210,8 @@ setTimeout(() => {
                 });
                 aviso.textContent = " ";
                 const data = Object.fromEntries(formData);
-                /*fetch("https://script.google.com/macros/s/AKfycbylJPoK0gXZxnMQzAWlCLGbwMvi7OsMV-rKF3eEpNDSkpbzZ8R6kzFAadKFIonA97Of-Q/exec", {
-                                 method: "POST",
-                                 body: new FormData(this)
-                })*/
                 
+                 
                  fetch("https://script.google.com/macros/s/AKfycbzLH8rURq7lZZtUBGwOt6tktE_CtYUzxsyoxZaY6sPx9Haka_OCBdcRPzPGZe_TTSxNHg/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
@@ -1233,6 +1231,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
