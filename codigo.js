@@ -824,7 +824,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
 
 //---------------------------Generar Folio
 function generarFolio() {
-  return 'FOLIO-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+  return Math.random().toString(36).substr(2, 8).toUpperCase();
 }
 
 
@@ -1074,6 +1074,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
