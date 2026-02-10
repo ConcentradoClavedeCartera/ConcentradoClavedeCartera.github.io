@@ -481,7 +481,7 @@ legend{
 }
 
 .imagenes h2 {
-  margin: -20px;
+  margin: 0px;
   line-height: 1.2;
   font-size: 1.1rem;
   white-space: normal;
@@ -503,6 +503,7 @@ a {
   width: 900px;
   
 } 
+
 
 
 
