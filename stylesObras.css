@@ -273,7 +273,7 @@ p {
 .tabla_style th:nth-child(1),
 .tabla_style td:nth-child(1){
     
-    min-width: 136px;
+    min-width: 156px;
 }
 .tabla_style th:nth-child(2),
 .tabla_style td:nth-child(2){
@@ -318,7 +318,7 @@ p {
 }
 .tabla_style th:nth-child(12),
 .tabla_style td:nth-child(12){
-    min-width: 186px;
+    min-width: 206px;
 }
 .tabla_style th:nth-child(13),
 .tabla_style td:nth-child(13){
@@ -334,7 +334,7 @@ p {
 }
 .tabla_style th:nth-child(16),
 .tabla_style td:nth-child(16){
-    min-width: 116px;
+    min-width: 136px;
 }
 .tabla_style th:nth-child(17),
 .tabla_style td:nth-child(17){
@@ -548,6 +548,7 @@ a {
   width: 900px;
   
 }
+
 
 
 
