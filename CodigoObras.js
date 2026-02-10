@@ -22,7 +22,6 @@ for (let i = 1; i <= 10; i++) {
         <option value="ObraNueva">Obra Nueva</option>
         <option value="Remodelación">Remodelación</option>
         <option value="Reparación">Reparación</option>
-        <option value="Adquisición">Adquisición</option>
         <option value="Otro">Otro</option>
     </select>
   </td>
@@ -1252,6 +1251,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
