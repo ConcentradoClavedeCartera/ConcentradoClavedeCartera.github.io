@@ -1051,6 +1051,12 @@ setTimeout(() => {
                     this.reportValidity(); // muestra mensajes
                     return;  
                 }
+                 const confirmar = confirm("¿Estás seguro de que deseas enviar el formulario?");
+
+                if (!confirmar) {
+                  // ❌ Usuario canceló
+                  return;
+                }
                 const formData = new FormData(this);
                 const selectsTexto = [
                       "secretaria",
@@ -1090,6 +1096,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
