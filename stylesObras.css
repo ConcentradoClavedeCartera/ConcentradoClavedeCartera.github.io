@@ -285,7 +285,7 @@ p {
 }
 .tabla_style th:nth-child(4),
 .tabla_style td:nth-child(4){
-    min-width: 108px;
+    min-width: 112px;
 }
 .tabla_style th:nth-child(5),
 .tabla_style td:nth-child(5){
@@ -548,6 +548,7 @@ a {
   width: 900px;
   
 }
+
 
 
 
