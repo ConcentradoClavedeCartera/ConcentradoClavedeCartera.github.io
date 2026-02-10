@@ -33,14 +33,17 @@ for (let i = 1; i <= 10; i++) {
     </td>
     
     
-    
     <td>
-      <select id="tipodeServicioR${i}" name="tipodeServicioR${i}" class="tabla_select" aria-label="tipodeServicio">
-                   <option value="">-- Selecciona una prioridad--</option>
-                   <option value="Preventivo">Preventivo</option>
-                   <option value="Correctivo">Correctivo</option>
-      </select>
+      <textarea
+        name="tipodeServicioR${i}"
+        class="auto-expand input_tabla "
+        rows="1"
+        style="resize:none;"
+        aria-label="tipo de Servicio"
+        ></textarea>
     </td>
+
+    
      
      <td>
           <input type="number"
@@ -716,11 +719,13 @@ function agregarFila(){
     
     
     <td>
-      <select id="tipodeServicioR${i}" name="tipodeServicioR${i}" class="tabla_select" aria-label="tipodeServicio">
-                   <option value="">-- Selecciona una prioridad--</option>
-                   <option value="Preventivo">Preventivo</option>
-                   <option value="Correctivo">Correctivo</option>
-      </select>
+      <textarea
+        name="tipodeServicioR${i}"
+        class="auto-expand input_tabla "
+        rows="1"
+        style="resize:none;"
+        aria-label="tipo de Servicio"
+        ></textarea>
     </td>
      
      <td>
@@ -1060,6 +1065,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
