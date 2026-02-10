@@ -27,8 +27,13 @@ for (let i = 1; i <= 10; i++) {
     </select>
   </td>
 
+  
+
+
+  
   <td>
-    <input type="number"
+    
+   <input type="number"
            name="antiguedadR${i}"
            class="input_tabla"
            aria-label="Antigüedad">
@@ -43,57 +48,73 @@ for (let i = 1; i <= 10; i++) {
       aria-label="justificacion"></textarea>
   </td>
 
+  
+
+
 
 
   <td>
-    <input type="number"
-           name="levTopograficoR${i}"
-           class="input_tabla"
-           aria-label="Levantamiento Topográfico (Año)">
+    <textarea  name="levTopograficoR${i}"
+    class="auto-expand input_tabla"
+    rows="1" 
+    style="resize:none;"
+     aria-label="Levantamiento Topográfico (Año)"></textarea>
   </td>
 
   <td>
-    <input type="number"
-           name="levArquitectonicoR${i}"
-           class="input_tabla"
-           aria-label="Levantamiento Arquitectónico (Año)">
+    <textarea  name="levArquitectonicoR${i}"
+    class="auto-expand input_tabla
+    "rows="1" style="resize:none;"
+    aria-label="Levantamiento Arquitectónico (Año)"></textarea>
   </td>
 
   <td>
-    <input type="number"
-           name="levEstructuralR${i}"
-           class="input_tabla"
-           aria-label="Levantamiento Estructural (Año)">
+    <textarea  name="levEstructuralR${i}"
+    class="auto-expand input_tabla "
+    rows="1" style="resize:none;"    
+    aria-label="Levantamiento Estructural (Año)"   ></textarea>
   </td>
+
+<td>
+      <textarea  name="estudioGeofisicoR${i}" 
+                 class="auto-expand input_tabla "
+                 rows="1" 
+                 style="resize:none;"  
+                 aria-label="Estudio Geofísico (Año)"></textarea>
+</td>
+
+<td>
+    <textarea  name="mecanicaSueloR${i}"    " 
+               class="auto-expand input_tabla "
+               rows="1" 
+               style="resize:none;"
+               aria-label="Cuenta con Mecánica de Suelo (Año)"></textarea>
+</td>
+
 
   <td>
-    <input type="number"
-           name="estudioGeofisicoR${i}"
-           class="input_tabla"
-           aria-label="Estudio Geofísico (Año)">
+      <select
+            name="proyectoR${i}"
+            class="tabla_select "
+            aria-label="Cuenta con Proyecto">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+     </select> 
+
   </td>
 
-  <td>
-    <input type="number"
-           name="mecanicaSueloR${i}"
-           class="input_tabla"
-           aria-label="Cuenta con Mecánica de Suelo (Año)">
-  </td>
 
-  <td>
-    <input type="number"
-           name="proyectoR${i}"
-           class="input_tabla"
-           aria-label="Cuenta con Proyecto (Año)">
+  
+    <td>
+      <textarea
+      name="superficieR${i}"
+      class="auto-expand input_tabla "
+      rows="1"
+      style="resize:none;"
+      aria-label="Superficie Disponible (M2)"></textarea>
   </td>
-
-  <td>
-    <input type="number"
-           name="superficieR${i}"
-           class="input_tabla"
-           aria-label="Superficie Disponible (M2)">
-  </td>
-
+  
    
 
   <td>
@@ -1231,6 +1252,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
