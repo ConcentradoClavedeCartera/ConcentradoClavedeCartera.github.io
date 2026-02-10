@@ -273,7 +273,7 @@ p {
 .tabla_style th:nth-child(1),
 .tabla_style td:nth-child(1){
     
-    min-width: 126px;
+    min-width: 136px;
 }
 .tabla_style th:nth-child(2),
 .tabla_style td:nth-child(2){
@@ -310,19 +310,19 @@ p {
 }
 .tabla_style th:nth-child(10),
 .tabla_style td:nth-child(10){
-    min-width: 136px;
+    min-width: 156px;
 }
 .tabla_style th:nth-child(11),
 .tabla_style td:nth-child(11){
-    min-width: 136px;
+    min-width: 156px;
 }
 .tabla_style th:nth-child(12),
 .tabla_style td:nth-child(12){
-    min-width: 166px;
+    min-width: 186px;
 }
 .tabla_style th:nth-child(13),
 .tabla_style td:nth-child(13){
-    min-width: 106px;
+    min-width: 136px;
 }
 .tabla_style th:nth-child(14),
 .tabla_style td:nth-child(14){
@@ -494,7 +494,7 @@ legend{
 
 /* imagen central un poco más chica */
 .imagenes .centro {
-  height: 90px;        /* ajusta a gusto */
+  height: 100px;        /* ajusta a gusto */
 }
 
 
@@ -548,6 +548,7 @@ a {
   width: 900px;
   
 }
+
 
 
 
