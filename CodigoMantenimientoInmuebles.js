@@ -857,7 +857,7 @@ function generarFolio() {
 
 
 try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbwvLpyKLMZOHw1FVuxbqukMG5c95ASGhV3KcZCLTy6Stt9uUq-6-Fwvt674QEL0vp6s/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbwB0LCst3AWQ0Mny-rIRrlE1dy_ybJe6q-H1b8PycymZSEWpoEVxxydgdigQC_L3mIb/exec", {
       method: "POST",
       body: JSON.stringify({action: "guardarBorrador", data})
     });
@@ -938,7 +938,7 @@ document.getElementById("cargarBorrador").addEventListener("click", async () => 
   }
 
 try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbwvLpyKLMZOHw1FVuxbqukMG5c95ASGhV3KcZCLTy6Stt9uUq-6-Fwvt674QEL0vp6s/exec", {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbwB0LCst3AWQ0Mny-rIRrlE1dy_ybJe6q-H1b8PycymZSEWpoEVxxydgdigQC_L3mIb/exec", {
       method: "POST",
       body: JSON.stringify({action: "cargarBorrador", folio})
     });
@@ -1052,7 +1052,7 @@ setTimeout(() => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbwvLpyKLMZOHw1FVuxbqukMG5c95ASGhV3KcZCLTy6Stt9uUq-6-Fwvt674QEL0vp6s/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbwB0LCst3AWQ0Mny-rIRrlE1dy_ybJe6q-H1b8PycymZSEWpoEVxxydgdigQC_L3mIb/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -1071,6 +1071,7 @@ setTimeout(() => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
